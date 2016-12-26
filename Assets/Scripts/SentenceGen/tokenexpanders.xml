@@ -1,0 +1,225 @@
+<tokenexpanders>
+
+<!-- Male First Names Go Here -->
+<tokenexpander type="fixed" token="malefirstname" selector="firstname">
+	<variation text="Trevor"/>
+	<variation text="John"/>
+	<variation text="Gordon"/>
+	<variation text="Graham"/>
+	<variation text="Alex"/>
+	<variation text="Jonas"/>
+	<variation text="Lucas"/>
+	<variation text="Caspian"/>
+	<variation text="Tom"/>
+</tokenexpander> 
+
+<!--- Female First Names Go Here -->
+<tokenexpander type="fixed" token="femalefirstname" selector="firstname">
+	<variation text="Lucy"/>
+	<variation text="Susan"/>
+	<variation text="Mavis"/>
+	<variation text="Victoria"/>
+	<variation text="Rosie"/>
+	<variation text="Freya"/>
+	<variation text="Alice"/>
+	<variation text="Emma"/>
+	<variation text="Helen"/>
+	<variation text="Rachel"/>
+	<variation text="Angelina"/>
+</tokenexpander> 
+
+<!-- Surnames Go Here -->
+<tokenexpander type="fixed" token="lastname" selector="lastname">
+	<variation text="Smith"/>
+	<variation text="Jones"/>
+	<variation text="Stevens"/>
+	<variation text="Richards"/>
+	<variation text="Robinson"/>
+	<variation text="Cumberbatch"/>
+	<variation text="Brown"/>
+	<variation text="Lewis"/>
+	<variation text="Wallace"/>
+	<variation text="Wright"/>
+	<variation text="O'Brien"/>
+	<variation text="MacLeod"/>
+</tokenexpander>
+
+<!-- Gender based words -->
+<!-- They all use the same selector so that gender is consistant -->
+<tokenexpander type="fixed" token="firstname" selector="gender">
+	<variation text="[malefirstname]"/>
+	<variation text="[femalefirstname]"/>
+</tokenexpander>
+
+<tokenexpander type="fixed" token="hisher" selector="gender">
+	<variation text="his"/>
+	<variation text="her"/>
+</tokenexpander>
+
+<tokenexpander type="fixed" token="heshe" selector="gender">
+	<variation text="he"/>
+	<variation text="she"/>
+</tokenexpander>
+
+<tokenexpander type="fixed" token="child" selector="gender">
+	<variation text="son"/>
+	<variation text="daughter"/>
+</tokenexpander>
+
+<!-- Professions -->
+<tokenexpander type="random" token="profession">
+	<variation text="teacher"/>		
+	<variation text="soldier"/>
+	<variation text="boxer"/>
+	<variation text="painter"/>
+	<variation text="astronaut"/>
+	<variation text="librarian"/>
+	<variation text="chef"/>
+	<variation text="model"/>
+	<variation text="geologist"/>
+	<variation text="surgeon"/>
+	<variation text="[game] player"/>
+	<variation text="[game] champion"/>
+	<variation text="[instrument] teacher"/>
+	<variation text="[instrument] player"/>
+	<variation text="[instrument] collector"/>
+	<variation text="[genre] author"/>
+</tokenexpander>
+
+<tokenexpander type="random" token="size">
+	<variation text="tiny"/>
+	<variation text="medium sized"/>
+	<variation text="large"/>
+	<variation text="big"/>
+	<variation text="massive"/>
+</tokenexpander>
+
+<!-- Places -->
+
+<tokenexpander type="random" token="placedesc">
+  <variation text="[size]"/>
+  <variation text="secluded"/>
+  <variation text="boring"/>
+  <variation text="lively"/>
+  <variation text="beautiful"/>
+  <variation text="grim"/>
+  <variation text="run-down"/>
+</tokenexpander>
+  
+<tokenexpander type="random" token="place">
+	<variation text="the [ageplace] desert"/>		
+	<variation text="the [ageplace] forest"/>
+	<variation text="the [ageplace] coast"/>
+	<variation text="the [ageplace] capital"/>
+	<variation text="the mountains"/>
+	<variation text="a [placedesc] village"/>
+	<variation text="a [placedesc] valley"/>
+	<variation text="a [placedesc] town"/>
+	<variation text="the artic wastes"/>
+	<variation text="the slums"/>
+</tokenexpander>
+
+<tokenexpander type="random" token="parent">
+	<variation text="[ageperson] [profession]"/>
+	<variation text="[skilllevel] [profession]"/>
+</tokenexpander>
+
+<tokenexpander type="random" token="background">
+  <variation text="the [child] of a [parent] from [place]"/>
+  <variation text="an orphan from [place]"/>
+  <variation text="a child prodigy from a [size] family"/>
+  <variation text="a [child] of a [parent] and a [parent]"/>
+</tokenexpander>
+  
+<tokenexpander type="range" token="ageperson" selector="ageyears">
+  <variation text="young" min="0" max="39"/>
+  <variation text="middle aged" min="40" max="59"/>
+  <variation text="old" min="60" max="89"/>
+  <variation text="ancient" min="90" max="200"/>
+</tokenexpander>
+
+<tokenexpander type="random" token="ageplace">
+  <variation text="new" />
+  <variation text="old" />
+  <variation text="ancient" />
+</tokenexpander>
+
+<!-- Hobbies & Activities -->
+<tokenexpander type="random" token="skilllevel">
+	<variation text="rubbish"/>		
+	<variation text="poor"/>		
+	<variation text="mediocre"/>		
+	<variation text="competent"/>		
+	<variation text="skilled"/>		
+	<variation text="talented"/>		
+	<variation text="an expert"/>		
+</tokenexpander>
+
+<tokenexpander type="random" token="game">
+	<variation text="football"/>
+  <variation text="[instrument]-ball"/>
+  <variation text="tennis"/>		
+	<variation text="badminton"/>		
+	<variation text="snooker"/>		
+	<variation text="bridge"/>		
+	<variation text="chess"/>		
+	<variation text="dominoes"/>		
+</tokenexpander>
+
+<tokenexpander type="random" token="instrument">
+	<variation text="piano"/>		
+	<variation text="trumpet"/>		
+	<variation text="harp"/>		
+	<variation text="harpsichord"/>		
+	<variation text="sitar"/>		
+	<variation text="drums"/>		
+	<variation text="flute"/>		
+	<variation text="bassoon"/>		
+	<variation text="trombone"/>		
+	<variation text="guitar"/>		
+</tokenexpander>
+
+<tokenexpander type="random" token="genre">
+	<variation text="horror"/>
+	<variation text="sci-fi"/>
+	<variation text="crime"/>
+	<variation text="thriller"/>
+	<variation text="romance"/>
+	<variation text="historical drama"/>
+</tokenexpander>
+
+<tokenexpander type="random" token="indoorhobby">
+	<variation text = "reading [genre]"/>
+	<variation text = "writing [genre] stories"/>
+	<variation text = "[genre] movies"/>
+	<variation text = "videogames"/>
+	<variation text = "knitting"/>
+</tokenexpander>
+
+<tokenexpander type="random" token="outdoorhobby">
+	<variation text = "hill walking"/>
+	<variation text = "fresh water fishing"/>
+	<variation text = "free running"/>
+	<variation text = "rock climbing"/>
+	<variation text = "ice skating"/>
+	<variation text = "freestyle snowboarding"/>
+	<variation text = "cave diving"/>
+	<variation text = "base jumping"/>
+	<variation text = "cross country cycling"/>
+</tokenexpander>
+
+<tokenexpander type="random" token="frequency">
+	<variation text = "sometimes"/>
+	<variation text = "occasionally"/>
+	<variation text = "often"/>
+	<variation text = "frequently"/>
+</tokenexpander>
+
+<tokenexpander type="random" token="activities">
+	<variation text = "[firstname] is interested in [indoorhobby], [outdoorhobby] and is [skilllevel] at [game]"/>
+	<variation text = "[heshe] enjoys [indoorhobby], [outdoorhobby] and [frequency] plays [game]"/>
+	<variation text = "Although [firstname] is [skilllevel] at [game], [heshe] enjoys [indoorhobby] and [outdoorhobby]"/>
+	<variation text = "[heshe] enjoys [indoorhobby], [outdoorhobby] and is [skilllevel] at playing the [instrument]"/>
+</tokenexpander>
+
+</tokenexpanders>
