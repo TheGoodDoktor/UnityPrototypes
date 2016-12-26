@@ -15,11 +15,15 @@ public class FlockController : MonoBehaviour
     private Vector3 m_FlockCentre;
     private Vector3 m_FlockVelocity;
     private FlockEntity[] m_FlockEntities;
-     
-	// Use this for initialization
-	void Start ()
+
+    // public properties
+    public Vector3 FlockCentre {get { return m_FlockCentre; } }
+    public Vector3 FlockVelocity { get { return m_FlockVelocity; } }
+
+    // Use this for initialization
+    void Start ()
     {
-        m_FlockEntities = new GameObject[m_FlockSize];
+        m_FlockEntities = new FlockEntity[m_FlockSize];
         Collider collider = GetComponent<Collider>();
         for(int i=0;i<m_FlockSize;i++)
         {
