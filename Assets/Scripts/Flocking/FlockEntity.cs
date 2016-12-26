@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FlockEntity : MonoBehaviour
 {
+    public float m_TargetInfluence = 4.0f;
+
     private GameObject m_FlockController;
     private bool m_Initialised = false;
     private float m_MinSpeed;
@@ -60,7 +62,7 @@ public class FlockEntity : MonoBehaviour
         flockVelocity = flockVelocity - m_Velocity;
         follow = follow - transform.localPosition;
 
-        return (flockCenter + flockVelocity + follow * 2 + randomize * m_Randomness);
+        return flockCenter + flockVelocity + (follow * m_TargetInfluence) + (randomize * m_Randomness);
     }
 
     // Update is called once per frame
